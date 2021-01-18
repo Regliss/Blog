@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<h1> Inscription </h1>
+
+	{#{{ form(userForm) }}#}
+
+	{{ form_start(userForm) }}
+
+	{{ form_row(userForm.email) }}
+
+	{{ form_label(userForm.username) }}
+	{{ form_widget(userForm.username, { 'attr' : {
+	'placeholder' : 'Pseudo',
+	'class' : 'customChamps'
+	}}) }}
+	
+
+	{{ form_row(userForm.password) }}
+
+	{{ form_end(userForm) }}
+
+{% endblock %}
